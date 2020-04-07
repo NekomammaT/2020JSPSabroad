@@ -1,0 +1,319 @@
+\documentclass[11pt,a4paper,uplatex,twoside,dvipdfmx]{ujarticle} 	% for uplatex
+%\documentclass[11pt,a4paper,twoside,dvipdfmx]{jarticle}		% platex
+%==== 科研費LaTeX =============================================
+%	2021(R03)年度 海外特別研究員
+%============================================================
+% 2009-03-07: Taku Yamanaka (Osaka Univ.)
+%			Copied over from PD.
+% 2011-03-20: Taku Yamanaka
+%			Made a 2012 version.
+% 2012-02-25: Taku: Made 2013 version.
+% 2013-03-15: Taku: Made 2014 version.
+% 2014-03-02: Taku: Made 2015 version.
+% 2015-02-22: Taku: Made 2016 version.
+% 2016-03-16: Taku: Made 2017 version.
+%============================================================
+\input{forms/form00_header}
+% user01_header
+%＝＝＝　様式のファイルの形式の指定　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+%   PDFではなく、eps の様式を読み込む場合は、次の行の頭に「%」をつけてください。
+\setboolean{usePDFform}{true}
+%＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+\input{forms/form01_header}
+
+% user02_header
+%＝＝＝　予算の表の印刷　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+% 予算の集計の表を出すためには、次の行の頭の%を消してください。
+%\setboolean{BudgetSummary}{true}
+%＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+%＝＝＝ For English, uncomment the next line to left-justify inside table columns.
+%\renewcommand{\KLCLLang}{\KLCL}
+
+% ＝＝＝　一部のページだけタイプセット　＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+% New in 2009 fall version!
+% 選んだページだけタイプセットするには、次の例の頭の%を消し、並べてください。
+% 複数のページを選ぶこともできます。
+% 提出前には、必ず全てコメントアウト(頭に%をつける)してください。
+%ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+%\KLTypesetPage{1}			% p.1 (or p.1を含む連続したページ),
+%\KLTypesetPage{3}			% p.3 (or p.3を含む連続したページ),
+%\KLTypesetPagesInRange{5}{6}	% p.5 ~ p.6,
+%\KLTypesetPagesInRange{8}{10}	% and p.8 ~ p.10
+%＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+% ===== my favorite packages ====================================
+% ここに、自分の使いたいパッケージを宣言して下さい。
+\usepackage{wrapfig}
+% \usepackage{amssymb}
+%\usepackage{mb}
+% \usepackage{color} % でも科研費の書類はグレースケールで印刷されます
+%\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\usepackage[multi,deluxe,bold,expert]{otf}
+\usepackage{comment}
+\usepackage[framemethod=tikz]{mdframed}
+%==========================================================
+
+\newcommand{\KLShouKeiLine}[1]{\cline{#1}}
+%もし、小計の上の線を取れと事務に言われたら、
+%「そのようなことは、記入要項に書かれていないし、学振はそのようなことは気にしていない。」と
+% 突っぱねる。
+% それでもなお消せと理不尽なことを言われたら、次の行の 最初の「%」を消す。	
+%\renewcommand{\KLShouKeiLine}[1]{}
+
+\newcommand{\KLBudgetTableFontSize}{small}	% 予算の表のフォントの大きさ: small, footnotesize
+\newcommand{\KLFundsTableFontSize}{small}	%応募中、受入れ予定の研究費のフォントの大きさ：normalsize, small, footnotesize
+
+% ===== my personal definitions ==================================
+% ここに、自分のよく使う記号などを定義して下さい。
+\newcommand{\klpionn}{K_L \to \pi^0 \nu \overline{\nu}}
+\newcommand{\kppipnn}{K^+ \to \pi^+ \nu \overline{\nu}}
+
+
+\renewcommand{\emph}[1]{{\sffamily\gtfamily\bfseries #1}}
+\newcommand{\subject}[1]{\noindent{\sffamily\gtfamily\bfseries #1}~~}
+\newcommand{\subsubject}[1]{\noindent \underline{#1}~~}
+%\newcommand{\Red}[1]{\textcolor{red}{\sffamily\gtfamily\bfseries #1}}
+\renewcommand{\bf}{\bfseries\sffamily\gtfamily}
+
+\input{forms/hook3} % for future maintenance
+% ===== Global definitions for the PD form ======================
+%　基本情報
+%
+%------ 研究課題名  -------------------------------------------
+\newcommand{\研究課題名}{\mgfamily ストカスティックインフレーション, 原始ブラックホール, および重力波観測}
+
+%----- 研究機関名と研究代表者の氏名-----------------------
+\newcommand{\研究機関名}{\mgfamily 名古屋大学}
+\newcommand{\申請者氏名}{\mgfamily 多田 祐一郎}
+\newcommand{\研究代表者氏名}{\申請者氏名}
+
+%---- 研究期間の最終年度 ----------------
+\newcommand{\研究期間の最終元号年度}{34}	%平成で、半角数字のみ
+%=========================================================
+\input{forms/form02_2021_header}	% <<<
+\input{forms/form03_header}
+\input{forms/form05_pdra_header}
+\input{forms/form07_header}
+%============================================================
+%endPrelude
+
+\begin{document}
+\mgfamily\sffamily
+\input{forms/hook5} % for future maintenance
+%============================================================
+%     User Inputs
+%============================================================
+
+%form: pdra_form_04-05.tex ; user: pdra_04-05_preparation_etc.tex
+%========== 海外特別研究員 =========
+%===== p. 04-05 現在までの研究状況 =============
+\section{現在までの研究状況}
+%watermark: w03_past_pdra
+\newcommand{\現在までの研究状況}{%
+%begin  現在までの研究状況＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+	\begin{mdframed}[roundcorner=0.5zw,
+	%skipabove=1zw,skipbelow=1zw,
+	innertopmargin=0.8zw,innerbottommargin=0.8zw,
+	%innerleftmargin=0.8zw,innerrightmargin=0.8zw,
+	%rightmargin=5000pt,leftmargin=50pt,
+	linecolor=black!50,linewidth=0.2zw,
+	backgroundcolor=black!10]
+	{\bfseries\gtfamily\sffamily\large 1. 研究の学術的背景および核心となる「問い」}
+	\end{mdframed}
+
+	%今までは、地球上で最大の生物、シロナガスクジラの卵の研究を進めようとしてきた。
+	%クジラの卵の場合は、高い水圧に耐える必要があるため、堅固の構造となっているはずであり、
+	%これが解明されれば、将来、深海潜水艇への応用も効く。
+	%しかし、シロナガスクジラの生息範囲が広い、海に潜っている時間が長い、
+	%生息数も減っている、などの原因により、
+	%卵を見つけることができなかった。
+	
+	%そこで、\underline{地球で}最大の動物から、\underline{地上で}最大の動物に研究対象を変更する。
+
+	%\input{blahblah}  % << only for demonstration. Please delete it or comment it out.	
+%end  現在までの研究状況 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+}
+
+%form: pdra_form_06-07.tex ; user: pdra_06-07_purpose.tex
+%========== 海外特別研究員 =========
+%===== p. 06-07 これからの研究計画 =============
+\section{これからの研究計画}
+%watermark: w02_purpose_pdra
+\subsection{研究目的・内容}
+\subsection{研究の特色・独創的な点}
+\newcommand{\研究の特色と独創的な点}{%
+%begin  研究の特色と独創的な点＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+	%象の卵の特色と独創的な点は．．．
+%end  研究の特色と独創的な点 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+}
+
+\subsection{研究目的}
+\newcommand{\研究目的}{%
+%begin  研究目的＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+	%象の卵の研究の目的は．．．
+	
+	%\vspace{1cm}
+	%\begin{thebibliography}{99}
+		%\bibitem{teramura} 寺村輝夫、「ぼくは王様 - ぞうのたまごのたまごやき」.
+	%\end{thebibliography}
+%end  研究目的 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+}
+
+%====================================
+%form: pdra_form_08.tex ; user: pdra_08_why_abroad.tex
+%========== 海外特別研究員 =========
+%===== p. 08 外国で研究する理由など =============
+\section{外国で研究する理由など}
+\section{外国で研究する事の意義}
+\newcommand{\外国で研究する事の意義}{%
+%begin  外国で研究する事の意義 (figureやtable使用可)＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+	%私は今まで、象の卵の可能性について主に文献を漁って研究をしてきた。
+	%そうした長年の研究の末分かったことの一つは、日本に現在、自然界に生息
+	%する象はいないということである。
+	%最も最近生息した象はケナガマンモスのようであるが、
+	%祖父が子供の頃には既に絶滅していたそうである。
+	%マンモスの氷漬けの個体は北海道で見つかったが、卵は見つかっていない。
+	%また最近では2005年に愛知県のある会場で氷漬けの個体が見つかったが、
+	%これは実は密かにロシアから持ち込まれたものであり、国産象ではない。
+	
+	%こうした経験から、象の卵を日本で探していても見つからないということを
+	%強く実感し、海外で研究する決心をした次第である。
+	%特に、象の卵を探す夢を子供の頃に私に与えてくれた
+	%Dr. Seussにぜひとも指導を仰ぎたく、師の元に行って研究を行う。
+%end  外国で研究する事の意義 (figureやtable使用可) ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+}
+
+%form: pdra_form_09.tex ; user: pdra_09_need_rights.tex
+%========== 海外特別研究員 =========
+%===== p. 09 人権、法令など =============
+\section{人権、法令など}
+\subsection{人権の保護及び法令の遵守}
+\newcommand{\人権の保護及び法令等の遵守への対応}{%
+%begin  人権の保護及び法令等の遵守への対応　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+	本研究は該当しない.
+	%象の卵のES細胞の培養、象のクローンの生成などは行わない。
+	%象個体を現地から持ち出すことはないので、ワシントン条約ならびに
+        %生物多様性条約に抵触しない。また、組換え実験は行なわないので、
+        %カルタヘナ議定書にも抵触しない。
+%end  人権の保護及び法令等の遵守への対応　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+}
+
+%form: pdra_form_10-11.tex ; user: pdra_10-11_publications.tex
+%========== 海外特別研究員 =========
+%===== p. 10-11 研究業績 =============
+\section{研究業績}
+%watermark: w14_pub_pdra
+% 2008-03-08 Taku
+% 2009-03-04 K.S.
+% 2010-03-08 Taku: copied from PD
+\renewcommand{\応募者の研究遂行能力}{%
+%begin  研究遂行能力　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+	応募者は過去20年間、７つの海を隅から隅まで航海し、
+	浅瀬から深海まで潜り、文字通り東西南北上下の３次元で
+	シロナガスクジラの卵の探索を行ってきた。
+	シロナガスクジラに飲み込まれそうになったり、海賊に捕まるなどの危険な目にも
+	あったが、それにもめげず、研究を遂行してきた強靭な能力を有する。
+%end  研究遂行能力　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+}
+
+\subsection{学術雑誌(紀要・論文集等も含む)に発表した論文及び著書}
+\newcommand{\学術雑誌等に発表した論文または著書}{%
+%begin  学術雑誌等に発表した論文または著書＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+	
+	\begin{enumerate}
+		\item[](査読有り)%===========================
+		\item \underline{H. Yukawa}$^1$, J. Kara$^2$,
+				``Theory of Elephant Eggs'', 
+				Phys.\ Rev.\ Lett. {\bf 800}, 800-804 (2005). 
+				\label{pub:theoegg}
+				
+		\item F.~Ehrlich, \underline{H. Yukawa}$^1$,
+				``You can't Lay an Egg If You're an Elephant'', 
+				JofUR\\
+				 ({\tt www.universalrejection.org}), {\bf N/A}, N/A (2002).
+
+		\item[](査読なし)%=============================
+		\item Kobo Abe$^3$, \underline{H. Yukawa}$^1$, 
+				``仔象は死んだ'', 
+				安部公房全集, {\bf 26}, 100-200, (2004).
+	\end{enumerate}
+	他５報
+%end  学術雑誌等に発表した論文または著書 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+}
+
+\subsection{学術雑誌等又は商業誌における解説・総説}
+\newcommand{\学術雑誌等または商業誌における解説や総説}{%
+%begin  学術雑誌等または商業誌における解説や総説＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+	\begin{enumerate}
+		\item R.~Kipling, \underline{H. Yukawa},
+				``The Elephant's Child (象の鼻はなぜ長い)'', 
+				Nature, {\bf 999}, 777-779, (2003).
+	\end{enumerate}
+	他２件
+%end  学術雑誌等または商業誌における解説や総説 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+}
+
+\subsection{国際会議における発表}
+\newcommand{\国際会議における発表}{%
+%begin  国際会議における発表＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+	\begin{enumerate}
+		\item $\circ$ 湯川秀樹、
+			``Theory of Elephant Eggs'', 
+			原始殻物理国際会議、
+			カラチ、2006年2月
+
+%		\item $\circ$ 湯川秀樹、Jacques-Yves Cousteau,
+%			``How to search for whale eggs'',
+%			国際海洋探索会議、ハワイ、2003年4月
+	\end{enumerate}
+	他１件
+%end  国際会議における発表 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+}
+
+\subsection{国内学会・シンポジウムにおける発表}
+\newcommand{\国内学会やシンポジウムにおける発表}{%
+%begin  国内学会やシンポジウムにおける発表＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+	\begin{enumerate}
+		\item $\circ$ 湯川秀樹、朝永振一郎、
+			「ほ乳類の真の意味」、
+			ほ乳類学会、
+			東京、2003年6月
+	\end{enumerate}
+	他３件
+%end  国内学会やシンポジウムにおける発表 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+}
+
+\subsection{特許}
+\newcommand{\特許等}{%
+%begin  特許等＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+	\begin{enumerate}
+		\item[](公開中)
+		\item 800800号、「クジラの卵を用いた深海潜水艇」\underline{湯川秀樹}、2003年4月
+%		\item[] (申請中)
+%		\item 8000000号、「象の卵を用いた（ひ・み・つ）」、\underline{湯川秀樹}、2007年4月
+	\end{enumerate}		
+%end  特許等 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+}
+
+\subsection{その他の業績}
+\newcommand{\その他の業績}{%
+%begin  その他の業績＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+		\begin{enumerate}
+			\item もうすぐもらえるで賞
+		\end{enumerate}
+%end  その他の業績 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+}
+
+%===========================================================
+% hook9 : right before \end{document} ============
+
+%endUserFiles
+\input{forms/hook7} % for future maintenance
+
+\input{forms/pdra_forms}
+%endFormatFile
+
+\input{forms/hook9} % for future maintenance
+\end{document}

@@ -1,0 +1,14 @@
+% pdra_forms
+%=======================================
+\ifthenelse{\boolean{BudgetSummary}\OR\boolean{klTypesetPage0}}{
+	\input{forms/coverpage}
+}{}
+
+\KLInputIfPageInRangeIsSelected{1}{2}{forms/pdra_form_04-05}
+\KLInputIfPageInRangeIsSelected{3}{4}{forms/pdra_form_06-07}
+\KLInputIfSelected{5}{forms/pdra_form_08}
+\KLInputIfSelected{6}{forms/pdra_form_09}
+\KLInputIfPageInRangeIsSelected{7}{8}{forms/pdra_form_10-11}
+	
+%========================================
+

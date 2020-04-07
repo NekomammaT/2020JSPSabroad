@@ -1,0 +1,67 @@
+%=================================================================
+% form05_pdra_header.tex
+%	2010-03-07: Taku Yamanaka (Osaka Univ.)
+%			Copied from PD.
+%=================================================================
+
+% ===== Global definitions for the Kakenhi form ======================
+%　基本情報
+\newcommand{\研究種目}{海外特別研究員}
+\newcommand{\研究種目後半}{}
+\ifthenelse{\isundefined{\研究種別}}{
+	\newcommand{\研究種別}{}
+}{}%
+\newcommand{\KLMainFile}{pdra.tex}
+\newcommand{\KLForms}{pdra_forms}
+\newcommand{\KLYoshiki}{pdra}
+
+%　奇数ページの下に記入される情報
+\newcommand{\klbyYup}{}
+\newcommand{\klbyYdown}{}
+\newcommand{\klbyKikanXleft}{}
+\newcommand{\klbyKikanXright}{}
+\newcommand{\klbyNameXleft}{}
+\newcommand{\klbyNameXright}{}
+
+\newcommand{\KLBottomInfo}[6]{%
+	\ifthenelse{\equal{#1}{}}{%
+		\renewcommand{\klbyYup}{54}
+		\renewcommand{\klbyYdown}{43}
+	}{%
+		\renewcommand{\klbyYup}{#1}
+		\renewcommand{\klbyYdown}{#2}
+	}
+	
+	\ifthenelse{\equal{#3}{}}{%
+		\renewcommand{\klbyKikanXleft}{132}
+		\renewcommand{\klbyKikanXright}{349}
+		\renewcommand{\klbyNameXleft}{415}
+		\renewcommand{\klbyNameXright}{542}
+	}{%
+		\renewcommand{\klbyKikanXleft}{#3}
+		\renewcommand{\klbyKikanXright}{#4}
+		\renewcommand{\klbyNameXleft}{#5}
+		\renewcommand{\klbyNameXright}{#6}
+	}
+%	\KLTextBox{\klbyKikanXleft}{\klbyYup}{\klbyKikanXright}{\klbyYdown}{}{\研究機関名}%
+	\KLTextBox{\klbyNameXleft}{\klbyYup}{\klbyNameXright}{\klbyYdown}{}{\申請者氏名}%
+}
+
+%==========================================================
+% frame edge positions of multi-page-block
+\newcommand{\KLOddMultiPageLeftEdge}{51}
+\newcommand{\KLOddMultiPageRightEdge}{544}
+\newcommand{\KLEvenMultiPageLeftEdge}{51}
+\newcommand{\KLEvenMultiPageRightEdge}{544}
+
+% vertical limits in the first multi-page-block
+\newcommand{\KLMultiPageTopEdge}{785}		%lowest top position (except for the 1st page)
+\newcommand{\KLMultiPageBottomEdge}{71}	%highest bottom position (except for the last page)
+
+% Modify the edges for single page frames if necessary
+\newcommand{\KLOddLeftEdge}{\KLOddMultiPageLeftEdge}
+\newcommand{\KLOddRightEdge}{\KLOddMultiPageRightEdge}
+\newcommand{\KLEvenLeftEdge}{\KLEvenMultiPageLeftEdge}
+\newcommand{\KLEvenRightEdge}{\KLEvenMultiPageRightEdge}
+
+%
