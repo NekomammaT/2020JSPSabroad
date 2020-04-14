@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.14159265-p3.8.2-u1.24-190131-2.6 (utf8.uptex) (TeX Live 2019) (preloaded format=uplatex 2019.5.26)  8 APR 2020 17:56
+This is e-upTeX, Version 3.14159265-p3.8.2-u1.24-190131-2.6 (utf8.uptex) (TeX Live 2019) (preloaded format=uplatex 2019.5.26)  15 APR 2020 00:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -937,26 +937,26 @@ Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 (./forms/form05_pdra_header.tex) (./forms/form07_header.tex) (./pdra.aux)
 \openout1 = `pdra.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
 LaTeX Font Info:    Font shape `JT2/hmc/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 102.
+(Font)              scaled to size 10.53629pt on input line 106.
 LaTeX Font Info:    Font shape `JY2/hmc/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 102.
+(Font)              scaled to size 10.53629pt on input line 106.
 \AtBeginShipoutBox=\box85
 
 ABD: EveryShipout initializing macros
@@ -994,56 +994,169 @@ ABD: EveryShipout initializing macros
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Font shape `JT2/mg/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 103.
+(Font)              scaled to size 10.53629pt on input line 107.
 LaTeX Font Info:    Font shape `JY2/mg/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 103.
+(Font)              scaled to size 10.53629pt on input line 107.
 (./forms/hook5.tex) (./forms/hook7.tex) (./forms/pdra_forms.tex
-(./forms/pdra_form_04-05.tex) (./forms/pdra_form_06-07.tex
+(./forms/pdra_form_04-05.tex
+LaTeX Font Info:    Font shape `JT2/hgt/m/n' will be
+(Font)              scaled to size 10.53629pt on input line 24.
+LaTeX Font Info:    Font shape `JY2/hgt/m/n' will be
+(Font)              scaled to size 10.53629pt on input line 24.
+LaTeX Font Info:    Font shape `JT2/hgt/bx/n' will be
+(Font)              scaled to size 10.53629pt on input line 24.
+LaTeX Font Info:    Font shape `JY2/hgt/bx/n' will be
+(Font)              scaled to size 10.53629pt on input line 24.
+Package mdframed Info: mdframed works in twoside mode on input line 24.
+
+
+LaTeX Font Warning: Font shape `JT2/mg/bx/n' undefined
+(Font)              using `JT2/mg/m/n' instead on input line 24.
+
+
+LaTeX Font Warning: Font shape `JY2/mg/bx/n' undefined
+(Font)              using `JY2/mg/m/n' instead on input line 24.
+
+LaTeX Font Info:    Font shape `JT2/hgt/bx/n' will be
+(Font)              scaled to size 11.54663pt on input line 24.
+LaTeX Font Info:    Font shape `JY2/hgt/bx/n' will be
+(Font)              scaled to size 11.54663pt on input line 24.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 24.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 24.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 24.
+LaTeX Font Info:    Font shape `JY2/hmc/m/n' will be
+(Font)              scaled to size 7.69775pt on input line 24.
+LaTeX Font Info:    Font shape `JY2/hmc/m/n' will be
+(Font)              scaled to size 5.77332pt on input line 24.
 File: pdra_forms_pdf/pdra-page1.pdf Graphic file (type pdf)
 <pdra_forms_pdf/pdra-page1.pdf>
- [1
+[1
 
 ]
+Package mdframed Info: mdframed works in twoside mode on input line 24.
+LaTeX Font Info:    Font shape `JT2/mg/bx/n' will be
+(Font)              scaled to size 10.53629pt on input line 24.
+LaTeX Font Info:    Font shape `JY2/mg/bx/n' will be
+(Font)              scaled to size 10.53629pt on input line 24.
+LaTeX Font Info:    Font shape `JT2/mg/m/n' will be
+(Font)              scaled to size 8.65997pt on input line 24.
+LaTeX Font Info:    Font shape `JY2/mg/m/n' will be
+(Font)              scaled to size 8.65997pt on input line 24.
+LaTeX Font Info:    Font shape `JT2/hmc/m/n' will be
+(Font)              scaled to size 8.65997pt on input line 24.
+LaTeX Font Info:    Font shape `JY2/hmc/m/n' will be
+(Font)              scaled to size 8.65997pt on input line 24.
+
+
+LaTeX Font Warning: Font shape `JT2/hmc/m/it' undefined
+(Font)              using `JT2/hmc/m/n' instead on input line 24.
+
+
+LaTeX Font Warning: Font shape `JY2/hmc/m/it' undefined
+(Font)              using `JY2/hmc/m/n' instead on input line 24.
+
+LaTeX Font Info:    Font shape `JT2/mg/bx/n' will be
+(Font)              scaled to size 8.65997pt on input line 24.
+LaTeX Font Info:    Font shape `JY2/mg/bx/n' will be
+(Font)              scaled to size 8.65997pt on input line 24.
+LaTeX Font Info:    Font shape `JT2/hgt/bx/n' will be
+(Font)              scaled to size 8.65997pt on input line 24.
+LaTeX Font Info:    Font shape `JY2/hgt/bx/n' will be
+(Font)              scaled to size 8.65997pt on input line 24.
+LaTeX Font Info:    Font shape `JT2/hmc/m/it' will be
+(Font)              scaled to size 8.65997pt on input line 24.
+LaTeX Font Info:    Font shape `JY2/hmc/m/it' will be
+(Font)              scaled to size 8.65997pt on input line 24.
+) (./forms/pdra_form_06-07.tex
 File: pdra_forms_pdf/pdra-page2.pdf Graphic file (type pdf)
 <pdra_forms_pdf/pdra-page2.pdf>
- [2
-
-])
-(./forms/pdra_form_08.tex
+ [2]
+Package mdframed Info: mdframed works in twoside mode on input line 36.
+Package mdframed Info: mdframed works in twoside mode on input line 36.
 File: pdra_forms_pdf/pdra-page3.pdf Graphic file (type pdf)
 <pdra_forms_pdf/pdra-page3.pdf>
  [3]
+Package mdframed Info: mdframed works in twoside mode on input line 36.
+) (./forms/pdra_form_08.tex
 File: pdra_forms_pdf/pdra-page4.pdf Graphic file (type pdf)
 <pdra_forms_pdf/pdra-page4.pdf>
- [4
-
-]) (./forms/pdra_form_09.tex
+ [4]
+Package mdframed Info: mdframed works in twoside mode on input line 20.
+Package mdframed Info: mdframed works in twoside mode on input line 20.
+)
+(./forms/pdra_form_09.tex
 File: pdra_forms_pdf/pdra-page5.pdf Graphic file (type pdf)
 <pdra_forms_pdf/pdra-page5.pdf>
  [5]
 File: pdra_forms_pdf/pdra-page6.pdf Graphic file (type pdf)
 <pdra_forms_pdf/pdra-page6.pdf>
-)
-(./forms/pdra_form_10-11.tex [6]
-
-LaTeX Font Warning: Font shape `JT2/mg/bx/n' undefined
-(Font)              using `JT2/mg/m/n' instead on input line 38.
-
-
-LaTeX Font Warning: Font shape `JY2/mg/bx/n' undefined
-(Font)              using `JY2/mg/m/n' instead on input line 38.
-
-LaTeX Font Info:    Font shape `JT2/mg/bx/n' will be
-(Font)              scaled to size 10.53629pt on input line 38.
-LaTeX Font Info:    Font shape `JY2/mg/bx/n' will be
-(Font)              scaled to size 10.53629pt on input line 38.
-LaTeX Font Info:    Font shape `JT2/hgt/bx/n' will be
-(Font)              scaled to size 10.53629pt on input line 38.
-LaTeX Font Info:    Font shape `JY2/hgt/bx/n' will be
-(Font)              scaled to size 10.53629pt on input line 38.
+) (./forms/pdra_form_10-11.tex [6]
 File: pdra_forms_pdf/pdra-page7.pdf Graphic file (type pdf)
 <pdra_forms_pdf/pdra-page7.pdf>
-[7])) (./forms/hook9.tex)
+ [7]
+LaTeX Font Info:    Font shape `JT2/hmc/bx/n' will be
+(Font)              scaled to size 10.53629pt on input line 86.
+LaTeX Font Info:    Font shape `JY2/hmc/bx/n' will be
+(Font)              scaled to size 10.53629pt on input line 86.
+
+Underfull \hbox (badness 10000) detected at line 86
+[] \OT1/cmss/m/n/10.95 2019.04--[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 86
+[] \OT1/cmss/m/n/10.95 2018.04--[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 86
+[] \OT1/cmss/m/n/10.95 2017.04--[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 86
+[] \OT1/cmss/m/n/10.95 2015.04--[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 86
+[] \OT1/cmss/m/n/10.95 2012.10--[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 86
+[] \OT1/cmss/m/n/10.95 2019.02[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 86
+[] \OT1/cmss/m/n/10.95 2017.02.24[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 86
+[] \OT1/cmss/m/n/10.95 2019--2020[]
+ []
+
+
+Underfull \hbox (badness 3158) detected at line 86
+[] \JY2/hgt/bx/n/10.95 研究者活動[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 86
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 86
+[] \OT1/cmss/m/n/10.95 2014.10.01--[]
+ []
+
+)) (./forms/hook9.tex)
 File: pdra_forms_pdf/pdra-page8.pdf Graphic file (type pdf)
 <pdra_forms_pdf/pdra-page8.pdf>
  [8] (./pdra.aux)
@@ -1052,12 +1165,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 27506 strings out of 493203
- 527172 string characters out of 6143927
- 532580 words of memory out of 5000000
- 31152 multiletter control sequences out of 15000+600000
- 537421 words of font info for 55 fonts, out of 8000000 for 9000
+ 27720 strings out of 493203
+ 532113 string characters out of 6143927
+ 567672 words of memory out of 5000000
+ 31352 multiletter control sequences out of 15000+600000
+ 543974 words of font info for 83 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 67i,12n,58p,807b,992s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,13n,82p,807b,1098s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on pdra.dvi (8 pages, 3904 bytes).
+Output written on pdra.dvi (8 pages, 62280 bytes).

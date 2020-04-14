@@ -73,16 +73,20 @@
 
 \renewcommand{\emph}[1]{{\sffamily\gtfamily\bfseries #1}}
 \newcommand{\subject}[1]{\noindent{\sffamily\gtfamily\bfseries #1}~~}
-\newcommand{\subsubject}[1]{\noindent \underline{#1}~~}
+\newcommand{\subsubject}[1]{\noindent \ul{#1}~~}
 %\newcommand{\Red}[1]{\textcolor{red}{\sffamily\gtfamily\bfseries #1}}
 \renewcommand{\bf}{\bfseries\sffamily\gtfamily}
+
+\newenvironment{footnoteSBL}{
+	\baselineskip=10pt
+}
 
 \input{forms/hook3} % for future maintenance
 % ===== Global definitions for the PD form ======================
 %　基本情報
 %
 %------ 研究課題名  -------------------------------------------
-\newcommand{\研究課題名}{\mgfamily ストカスティックインフレーション, 原始ブラックホール, および重力波観測}
+\newcommand{\研究課題名}{\mgfamily ストカスティック形式、原始ブラックホール、重力波観測から迫るインフレーション}
 
 %----- 研究機関名と研究代表者の氏名-----------------------
 \newcommand{\研究機関名}{\mgfamily 名古屋大学}
@@ -114,15 +118,182 @@
 \newcommand{\現在までの研究状況}{%
 %begin  現在までの研究状況＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 	
-	%\begin{mdframed}[roundcorner=0.5zw,
-	%%skipabove=1zw,skipbelow=1zw,
-	%innertopmargin=0.8zw,innerbottommargin=0.8zw,
-	%%innerleftmargin=0.8zw,innerrightmargin=0.8zw,
-	%%rightmargin=5000pt,leftmargin=50pt,
-	%linecolor=black!50,linewidth=0.2zw,
-	%backgroundcolor=black!10]
-	%{\bfseries\gtfamily\sffamily\large 1. 研究の学術的背景および核心となる「問い」}
-	%\end{mdframed}
+	本研究の目的は, 初期宇宙の加速膨張期「インフレーション」の解明に向けて,
+	その理論的側面として\emph{ストカスティック形式}の理解を深めるとともに,
+	その観測的側面として\emph{原始ブラックホール}と\emph{重力波}の物理を模索することである.
+	本項では研究の背景とこれまでに得られた成果を以下にまとめる.
+	
+	\begin{mdframed}[roundcorner=0.5zw,
+	%skipabove=1zw,skipbelow=1zw,
+	innertopmargin=0.8zw,innerbottommargin=0.8zw,
+	%innerleftmargin=0.8zw,innerrightmargin=0.8zw,
+	%rightmargin=5000pt,leftmargin=50pt,
+	linecolor=black!50,linewidth=0.2zw,
+	backgroundcolor=black!10]
+	{\bfseries\gtfamily\sffamily\large ① これまでの研究背景・問題点・研究方法}
+	\end{mdframed}
+	
+	\vspace{-10pt}
+	\subject{1. 研究の背景} 
+	インフレーションは, 宇宙が大局的に一様等方平坦である理由を説明しつつ, さらに銀河などの構造のもととなる初期の曲率ゆらぎを量子効果で生成できる有望な機構である. 
+	観測的には主に宇宙背景放射 (Cosmic Microwave Background: CMB) の温度非等方性や
+	銀河の大規模構造 (Large Scale Structure: LSS) からその正しさが検証されてきたが, 
+	特に 2013, 15, 18年には Planck 衛星による CMB の精密な測定結果が発表され[1], 
+	インフレーション機構はさらに強く支持されるようになった.
+	
+	しかしインフレーションの\emph{具体的な機構}は未だ解明されていない.
+	むしろ Planck の詳細な観測により \ul{1) 有力視されていた模型の多くは棄却}されてしまい,
+	一方でゆらぎの非ガウス性や初期重力波などの \ul{2) 機構の決定に役立つ特徴量は何も観測できない}結果に終わってしまった.
+	さらに近年 \ul{3) 超弦理論等の高エネルギー理論はインフレーションと相性が悪い}可能性が指摘されている[2].
+	こうした3つの問題を踏まえ, 今こそ理論的にも観測的にも新たな視点が必要となっている.
+	
+	一方明るいニュースとして2015年に LIGO/Virgo グループが初めて重力波の直接観測に成功し[3],
+	続く LISA などの重力波望遠鏡衛星計画も視野に入り, 今や\emph{重力波は現実的な観測対象}となっている.
+	さらに重力波源となる可能性をきっかけに\emph{原始ブラックホール (Primordial Black Hole: PBH)} も最注目されてきている.
+	ブラックホールは通常重い星から形成されるが, インフレーションで大きな曲率ゆらぎが作られた場合, 宇宙初期の放射ゆらぎが直接潰れることでも形成され, これを PBH と呼ぶ.
+	逆に PBH が発見されればインフレーション模型への大きな情報となる. 
+	さらに PBH は重力波源となるだけでなく, 暗黒物質の候補であったり, OGLE によって観測されたマイクロ重力レンズ現象のレンズ天体候補であったりするなど[4],
+	天体そのものとしても興味深い.
+	
+	
+	
+	\vspace{3pt}
+	\subject{2. 問題点および解決方策}
+	上述した3つの問題を踏まえ, 理論的にはインフレーションに関わる場 (インフラトンと呼ぶ) が複数相互作用し合い, さらにインフラトンの住む多様体が曲がっている場合などの
+	複雑な模型も視野に入れ研究する必要が出てきた. 実際複数場が関わるのは超弦理論の文脈からも自然である.
+	一方観測量としての PBH については, PBH を形成するには大きなゆらぎ ($\sim1$) が必要になるのに対し, CMB や LSS の観測から大スケールのゆらぎは非常に小さい ($\sim10^{-5}$) ことがわかっており,
+	PBH 形成模型はパラメータの微細調整を必要とする不自然なものが多かった.
+	また PBH 形成に必要な大きなゆらぎを摂動論で扱う危険性も多数指摘されている ([5]等).
+	重力波に関してはその黎明期であり, 重力波からどのようなインフレーションの情報を得られるかまだまだ研究途上である.
+	
+	そこで私は, \ul{i) 複数場においてもゆらぎを非摂動的かつ自動的に計算できるストカスティック形式}に着目しその理論的整備を進めるとともに,
+	\ul{ii) 複数場による自然な PBH 形成模型}を探り, さらに \ul{iii) 重力波観測量とインフレーション特徴量の関連づけ}を本研究の目的とする.
+	
+	
+	\vspace{3pt}
+	\subject{3. 研究目的・方法および独創性}
+	
+	\subsubject{i) ストカスティック形式:}
+	通常インフレーションによるゆらぎは, ゆらぎのない一様背景場のまわりで摂動展開して計算されるが,
+	ストカスティック形式ではゆらぎをブラウン運動として背景場そのものに取り入れ計算する手法である[6]. 
+	そのため少なくともインフラトンのゆらぎ自体は非摂動的に計算可能である.
+	しかしこれまではインフラトンゆらぎを観測量である (空間) 曲率ゆらぎに変換する際に摂動展開を必要としてしまっていた.
+	そこで私は曲率ゆらぎとインフレーション持続時間を結びつける $\delta N$~形式を応用することで,
+	\emph{曲率ゆらぎまで非摂動的に計算するアルゴリズム}を提唱した (研究遂行能力欄 4-(1)-8).
+	これによりアルゴリズムを適用すれば複数場においても曲率ゆらぎの自動計算が可能となり,
+	さらに摂動展開を必要としないので PBH に必要な大きなゆらぎも制御可能となった.
+	このストカスティック-$\delta N$形式の研究を進めることが提唱者である私の独創的研究の1つである.
+	
+	\vspace{3pt}
+	\subsubject{ii) PBH:}
+	PBH 形成は単一場インフレーションで実現しようとすると CMB スケールのゆらぎの大きさとの差から不自然な模型になることが多い.
+	一方インフラトンを複数にしさらにインフレーションをいくつかの段階に分け CMB スケールと PBH スケールを異なった段階に割り当てることで
+	簡単かつ自然に PBH を実現することができる(4-(1)-5).
+	多段階インフレーションは段階のつなぎ目が相転移になることがしばしばあり, この時ゆらぎが力学を支配するので従来の摂動計算が破綻していた.
+	しかし上述したストカスティック-$\delta N$形式を用いればこのような場合も曲率ゆらぎを計算することができるので,
+	ストカスティック形式を応用しながら多段階インフレーションでの PBH 形成を議論することが2つ目の私の独創的研究である.
+	また私は非ガウスなゆらぎの大小スケール相関が PBH の空間分布を変動させることを指摘した (4-(1)-7).
+	これは後述する重力波の非等方性にも関連してくる.
+	
+	
+	\vspace{3pt}
+	\subsubject{iii) 重力波:}
+	PBH はその連星合体で直接重力波源になるだけでなく, PBH を作るほど大きな曲率ゆらぎが2次的に背景重力波を作ることが知られている.
+	興味深いのは, PBH 暗黒物質として許される PBH 質量に対応する背景重力波の周波数がちょうど LISA の感度にあたることである[7].
+	また上述したようにゆらぎに大小スケールの相関があると PBH と同様に2次重力波の強度も非等方性を持つことになり[8],
+	その計算には (4-(1)-7) で提唱した PBH 空間分布と同種の手法が必要である.
+	こうした2次重力波を介してインフレーションや初期宇宙の物理について示唆を与えることが3つ目の私の独創的研究である.
+	
+	
+	
+	\begin{mdframed}[roundcorner=0.5zw,
+	%skipabove=1zw,skipbelow=1zw,
+	innertopmargin=0.8zw,innerbottommargin=0.8zw,
+	%innerleftmargin=0.8zw,innerrightmargin=0.8zw,
+	%rightmargin=5000pt,leftmargin=50pt,
+	linecolor=black!50,linewidth=0.2zw,
+	backgroundcolor=black!10]
+	{\bfseries\gtfamily\sffamily\large ② 研究経過および得られた結果}
+	\end{mdframed}
+	
+	\vspace{-10pt}
+	上述したように私はストカスティック形式と$\delta N$~形式を組み合わせることで非摂動的に曲率ゆらぎを計算できるアルゴリズムを提唱した(4-(1)-8).
+	これを適用し2次相転移の起こるハイブリッドインフレーション模型において初めて定量的に曲率ゆらぎを計算し, さらに PBH 形成を議論した(4-(1)-6).
+	その後共同研究者でもある Vennin 博士がより解析しやすい偏微分方程式の形に焼き直し[9],
+	パリでの受入研究者であった Renaux-Petel 博士も交え, 現在自動でインフレーション模型を解析できる公開数値コードの開発を行っている.
+	Renaux-Petel 博士とはストカスティック形式のより理論的な側面として,
+	素朴な複数場への拡張はインフラトン多様体上での理論の共変性を壊し得ること (stochastic anomaly) を指摘し(4-(1)-2),
+	引き続き共変なストカスティック形式の定式化についての論文を執筆中である.
+	Vennin 博士とは $\delta N$~形式においてゆらぎの大小スケール相関の計算方法を定式化し (4-(1)-4),
+	これは上述した PBH の空間分布や2次重力波の非等方性などに対し重要である.
+	
+	PBH に関して, 多段階インフレーションにて PBH が簡単に実現できることを指摘した (4-(1)-5) 後は,
+	関連する2次重力波を計算し (4-(1)-3), また多段階インフレーションが超弦理論とも相性がいいことを示した(4-(1)-1).
+	現在は2次重力波に関し名古屋大学同研究室所属の修士課程学生である植田氏とともに, 初期宇宙の QCD 相転移中に生成された2次重力波が
+	QCD 相転移中のプラズマの性質を探査できる可能性について研究中である.
+	
+	
+	\vspace{3pt}
+	\footnotesize{
+	\vspace{3pt}
+	\begin{footnoteSBL}
+	\noindent
+  	[1] P.~A.~R.~Ade {\it et al.}, %[Planck Collaboration], 
+	Astron.\ Astrophys.\  {\bf 571}, A1 (2014).
+	R.~Adam {\it et al.}, %[Planck Collaboration], 
+	Astron.\ Astrophys.\  {\bf 594}, A1 (2016). 
+	Y.~Akrami {\it et al.}, %[Planck Collaboration],
+  	%``Planck 2018 results. I. Overview and the cosmological legacy of Planck,''
+  	arXiv:1807.06205 [astro-ph.CO].
+	[2] G.~Obied, H.~Ooguri, L.~Spodyneiko and C.~Vafa,
+  	%``De Sitter Space and the Swampland,''
+  	arXiv:1806.08362 [hep-th].
+	H.~Ooguri, E.~Palti, G.~Shiu and C.~Vafa,
+  	%``Distance and de Sitter Conjectures on the Swampland,''
+  	Phys.\ Lett.\ B {\bf 788}, 180 (2019).
+  	%doi:10.1016/j.physletb.2018.11.018
+  	%[arXiv:1810.05506 [hep-th]].
+	[3] B.~P.~Abbott {\it et al.}, %[LIGO Scientific and Virgo Collaborations],
+  	%``Observation of Gravitational Waves from a Binary Black Hole Merger,''
+  	Phys.\ Rev.\ Lett.\  {\bf 116}, no. 6, 061102 (2016).
+  	%doi:10.1103/PhysRevLett.116.061102
+  	%[arXiv:1602.03837 [gr-qc]].
+	[4] H.~Niikura, M.~Takada, S.~Yokoyama, T.~Sumi and S.~Masaki,
+  	%``Constraints on Earth-mass primordial black holes from OGLE 5-year microlensing events,''
+  	Phys.\ Rev.\ D {\bf 99}, no. 8, 083503 (2019).
+  	%doi:10.1103/PhysRevD.99.083503
+  	%[arXiv:1901.07120 [astro-ph.CO]].
+	[5]  J.~M.~Ezquiaga, J.~García-Bellido and V.~Vennin,
+  	%``The exponential tail of inflationary fluctuations: consequences for primordial black holes,''
+  	JCAP {\bf 2003}, no. 03, 029 (2020).
+  	%doi:10.1088/1475-7516/2020/03/029
+  	%[arXiv:1912.05399 [astro-ph.CO]].
+	[6] A.~A.~Starobinsky,
+	%``STOCHASTIC DE SITTER (INFLATIONARY) STAGE IN THE EARLY UNIVERSE,''
+	Lect.\ Notes Phys.\  \textbf{246}, 107-126 (1986).
+	%doi:10.1007/3-540-16452-9_6
+	S.~Matarrese, M.~A.~Musso and A.~Riotto,
+  	%``Influence of superhorizon scales on cosmological observables generated during inflation,''
+  	JCAP {\bf 0405}, 008 (2004).
+  	%doi:10.1088/1475-7516/2004/05/008
+  	%[hep-th/0311059].
+	[7] N.~Bartolo, V.~De Luca, G.~Franciolini, A.~Lewis, M.~Peloso and A.~Riotto,
+  	%``Primordial Black Hole Dark Matter: LISA Serendipity,''
+  	Phys.\ Rev.\ Lett.\  {\bf 122}, no. 21, 211301 (2019).
+  	%doi:10.1103/PhysRevLett.122.211301
+  	%[arXiv:1810.12218 [astro-ph.CO]].
+	[8] N.~Bartolo {\it et al.},
+  	%``Gravitational Wave Anisotropies from Primordial Black Holes,''
+  	JCAP {\bf 2002}, no. 02, 028 (2020).
+  	%doi:10.1088/1475-7516/2020/02/028
+  	%[arXiv:1909.12619 [astro-ph.CO]].
+	[9] V.~Vennin and A.~A.~Starobinsky,
+  	%``Correlation Functions in Stochastic Inflation,''
+  	Eur.\ Phys.\ J.\ C {\bf 75}, 413 (2015).
+  	%doi:10.1140/epjc/s10052-015-3643-y
+  	%[arXiv:1506.04732 [hep-th]].
+	\end{footnoteSBL}
+	}
 
 	%今までは、地球上で最大の生物、シロナガスクジラの卵の研究を進めようとしてきた。
 	%クジラの卵の場合は、高い水圧に耐える必要があるため、堅固の構造となっているはずであり、
@@ -146,6 +317,17 @@
 \subsection{研究の特色・独創的な点}
 \newcommand{\研究の特色と独創的な点}{%
 %begin  研究の特色と独創的な点＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+	\subject{① 先行研究との比較・本研究の独創的な点}
+	
+	
+	\vspace{3pt}
+	\subject{② 当該研究の位置づけ}
+	
+	
+	\vspace{3pt}
+	\subject{③ 予想されるインパクト}
+
 	%象の卵の特色と独創的な点は．．．
 %end  研究の特色と独創的な点 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 }
@@ -153,6 +335,131 @@
 \subsection{研究目的}
 \newcommand{\研究目的}{%
 %begin  研究目的＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+	
+	\begin{mdframed}[roundcorner=0.5zw,
+	%skipabove=1zw,skipbelow=1zw,
+	innertopmargin=0.8zw,innerbottommargin=0.8zw,
+	%innerleftmargin=0.8zw,innerrightmargin=0.8zw,
+	%rightmargin=5000pt,leftmargin=50pt,
+	linecolor=black!50,linewidth=0.2zw,
+	backgroundcolor=black!10]
+	{\bfseries\gtfamily\sffamily\large ① 研究目的・方法・内容}
+	\end{mdframed}
+	
+	\vspace{-10pt}
+	\subject{1. ストカスティック形式}
+	まずは前項で述べた共変なストカスティック形式の定式化と数値計算コードの公開を完了する.
+	定式化の論文は執筆の最終段階であるし, 数値コード自体も完成はしているので, これらは着任までに達成される予定である.
+	着任後は受入研究者である Matarrese 教授とともに, \emph{ストカスティック形式におけるゆらぎの非ガウス性}の計算の定式化を行う.
+	前述したようにストカスティック形式は非摂動的手法であるので, ゆらぎの最低次の情報である「大きさ」だけでなく,
+	正負の非対称性や大小スケールの相関などの非ガウス性の情報も自動的に含んでいることになる.
+	現在 Matarrese 教授は私とは独立にストカスティック形式での非ガウス性についての研究を立ち上げているところであり,
+	そこに私の「$\delta N$~形式での大小スケール相関の定式化」(4-(1)-4) の研究を組み合わせる形で,
+	ゆらぎの非ガウス性に対しストカスティック形式という新たな側面から迫る.
+	
+	また数値計算コードを様々な模型に適用し, 新たなインフレーション機構や PBH 形成模型の可能性を探る.
+	具体的には1つ目としてまず, インフラトンのポテンシャル相互作用だけでなく, その\emph{多様体の幾何構造に運動が強く影響}される模型が挙げられる.
+	特にパリの Renaux-Petel 博士によって多様体が負曲率を持つ場合, 運動が不安定になり2次相転移を起こす可能性があることが指摘され[10],
+	以降幾何学力を使った模型はインフレーションの新たな可能性として注目されている([11]等).
+	前述したとおり2次相転移点付近でのゆらぎの計算にはストカスティック形式が必須であり,
+	また転移点で作られる大きなゆらぎは PBH を形成する可能性があり興味深い.
+	もう1つは\emph{スローロール (Slow-Roll: SR) 条件が破れる}模型である.
+	SRとはインフラトンポテンシャルが十分平らで, ポテンシャル力と摩擦抵抗が釣り合った状態のことを指す.
+	我々は単一場SR模型ではストカスティック効果が無視できることを示したが (4-(1)-8),
+	SR条件を破れば単一場でもゆらぎを急激に増減させることが可能であり, ストカスティック効果の大きさは PBH 形成の文脈でも重要である([12]等).
+	また超弦理論の文脈ではインフラトンポテンシャルは常にSR条件を破ることが示唆され[2],
+	単一場に限らず複数場においてもSR状態を超えてゆらぎの解析を行うことが求められている.
+	我々のストカスティック形式の定式化および数値計算コードではSR近似を用いず完全な形式で議論されているため,
+	SR条件が破れる模型にも適用可能である.
+	これらの研究は受入研究室の Matarrese 教授や Bartolo 教授の協力だけでなく,
+	フランスの Renaux-Petel 博士や Vennin 博士の協力も仰ぎ,
+	広く\emph{ヨーロッパの研究コミュニティーに対し我々の定式化の普及}を進めたい.
+	
+	
+	\vspace{3pt}
+	\subject{2. PBH}
+	上述したような模型に対しストカスティック形式を適用しながら PBH 形成の可能性を探る.
+	特に PBH 生成量の計算にはゆらぎの大きさだけでなくその\emph{確率分布の裾}が重要であることが示されており[5],
+	上述した数値計算コードとは別に, 確率分布の裾を中心的に計算するコードを作り PBH 計算に役立てる.
+	また PBH 空間分布や2次重力波の非等方性を作るゆらぎの大小スケール相関について,
+	Matarrese 教授との非ガウス性の研究を通し, 相関を作る具体的な模型を模索する.
+	
+	
+	\vspace{3pt}
+	\subject{3. 重力波}
+	受入研究室所属の Bartolo 教授とともに, 特に LISA を見据えて2次重力波やその他背景重力波の
+	非ガウス性の検出可能性を議論する.
+	まずは上述したように大小スケール相関由来の重力波非等方性を角度パワースペクトルとして,
+	観測誤差推定 (フィッシャー解析) を通じ具体的な観測可能性を明らかにする.
+	その後は非等方性に限らず, 非ガウス性由来の観測量やパリティの破れ由来の重力波カイラリティなど,
+	重力波を通して初期宇宙に関する情報を得る可能性を模索する.
+	
+	
+	
+	
+	\begin{mdframed}[roundcorner=0.5zw,
+	%skipabove=1zw,skipbelow=1zw,
+	innertopmargin=0.8zw,innerbottommargin=0.8zw,
+	%innerleftmargin=0.8zw,innerrightmargin=0.8zw,
+	%rightmargin=5000pt,leftmargin=50pt,
+	linecolor=black!50,linewidth=0.2zw,
+	backgroundcolor=black!10]
+	{\bfseries\gtfamily\sffamily\large ② 年次計画}
+	\end{mdframed}
+	
+	\vspace{-10pt}
+	\subject{1年目}
+	初年度はストカスティック-$\delta N$の非ガウス性への拡張と LISA の重力波角度パワースペクトル検出能力の解析の研究に集中する.
+	余裕があればストカスティック-$\delta N$をゆらぎの確率分布の裾の計算に拡張し, PBH 量の正確な見積もりを定式化する研究を行う.
+	ストカスティック形式に関わる2つの研究はすでに私自身多くの経験を持っており, スムーズに行えるはずである.
+	重力波解析に関しては Bartolo 教授の助けを借りながら遂行したい.
+	
+	
+	\vspace{3pt}
+	\subject{2年目}
+	次年度には残った研究, すなわちストカスティック-$\delta N$の様々なインフレーション模型 (特に幾何学的力が働く模型と SR 条件の破れた模型) への適用,
+	ゆらぎが大小スケール相関を持つ模型の提唱, そして重力波を通じて初期宇宙に関する情報を与える観測量の模索を可能な限り押し進める.
+	
+	
+	\begin{mdframed}[roundcorner=0.5zw,
+	%skipabove=1zw,skipbelow=1zw,
+	innertopmargin=0.8zw,innerbottommargin=0.8zw,
+	%innerleftmargin=0.8zw,innerrightmargin=0.8zw,
+	%rightmargin=5000pt,leftmargin=50pt,
+	linecolor=black!50,linewidth=0.2zw,
+	backgroundcolor=black!10]
+	{\bfseries\gtfamily\sffamily\large ③ 申請者の担当}
+	\end{mdframed}
+	
+	\vspace{-10pt}
+	ストカスティック形式と PBH の研究に関しては, Matarrese 教授と Bartolo 教授と議論を重ねながらも,
+	研究の主要な部分は申請者が行う. 重力波の特に観測器の感度解析に関しては Bartolo 教授の指導のもと手法を学ぶ予定である.
+	それぞれ場合によっては研究室の学生への指導を交え, 研究の分担を行う可能性もある.
+	
+	
+	\vspace{3pt}
+	\footnotesize{
+	\vspace{3pt}
+	\begin{footnoteSBL}
+	\noindent
+  	[10] S.~Renaux-Petel and K.~Turzyński,
+  	%``Geometrical Destabilization of Inflation,''
+  	Phys.\ Rev.\ Lett.\  {\bf 117}, no. 14, 141301 (2016).
+  	%doi:10.1103/PhysRevLett.117.141301
+  	%[arXiv:1510.01281 [astro-ph.CO]].
+	[11] A.~R.~Brown,
+  	%``Hyperbolic Inflation,''
+  	Phys.\ Rev.\ Lett.\  {\bf 121}, no. 25, 251601 (2018).
+  	%doi:10.1103/PhysRevLett.121.251601
+  	%[arXiv:1705.03023 [hep-th]].
+	[12] J.~M.~Ezquiaga and J.~García-Bellido,
+  	%``Quantum diffusion beyond slow-roll: implications for primordial black-hole production,''
+  	JCAP {\bf 1808}, 018 (2018).
+  	%doi:10.1088/1475-7516/2018/08/018
+  	%[arXiv:1805.06731 [astro-ph.CO]].
+	\end{footnoteSBL}
+	}
+	
 	%象の卵の研究の目的は．．．
 	
 	%\vspace{1cm}
@@ -170,6 +477,27 @@
 \section{外国で研究する事の意義}
 \newcommand{\外国で研究する事の意義}{%
 %begin  外国で研究する事の意義 (figureやtable使用可)＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+	
+	\begin{mdframed}[roundcorner=0.5zw,
+	%skipabove=1zw,skipbelow=1zw,
+	innertopmargin=0.8zw,innerbottommargin=0.8zw,
+	%innerleftmargin=0.8zw,innerrightmargin=0.8zw,
+	%rightmargin=5000pt,leftmargin=50pt,
+	linecolor=black!50,linewidth=0.2zw,
+	backgroundcolor=black!10]
+	{\bfseries\gtfamily\sffamily\large ① 研究関連性}
+	\end{mdframed}
+	
+	\begin{mdframed}[roundcorner=0.5zw,
+	%skipabove=1zw,skipbelow=1zw,
+	innertopmargin=0.8zw,innerbottommargin=0.8zw,
+	%innerleftmargin=0.8zw,innerrightmargin=0.8zw,
+	%rightmargin=5000pt,leftmargin=50pt,
+	linecolor=black!50,linewidth=0.2zw,
+	backgroundcolor=black!10]
+	{\bfseries\gtfamily\sffamily\large ② 派遣の意義}
+	\end{mdframed}
+
 	%私は今まで、象の卵の可能性について主に文献を漁って研究をしてきた。
 	%そうした長年の研究の末分かったことの一つは、日本に現在、自然界に生息
 	%する象はいないということである。
@@ -211,14 +539,85 @@
 % 2010-03-08 Taku: copied from PD
 \renewcommand{\応募者の研究遂行能力}{%
 %begin  研究遂行能力　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-	\vspace{10\baselineskip}
+	
+	%\smallskip
+	
+	申請者はこれまで計17報の学術論文と, 23件の国際会議, および10件の国内会議での発表を行ってきた.
+	また国内外の研究機関で計20件 (うち5件が招待) のセミナー講演を行っている. 
+	今回の受入先であるパドヴァ大学の理論物理グループにもセミナー発表で訪れ, Matarrese 教授や Bartolo 教授と議論を行った.
+	特筆すべきは国を超えた研究活動経験であり, 申請者は学生のころから\emph{外国人とともに共同研究}を行い ((1)-3, 4), 
+	2017年度にはフランスの\emph{パリ天体物理学研究所 (IAP) にポスドク研究員として雇用}され研究を行った ((1)-2).
+	現在も引き続き IAP の共同研究者と日々オンラインで研究を進めたり, \emph{フランスでの国際研究会の開催協力} ((3)-1) を行ったりしている.
+	こうした国際連携活動を買われ, 今年発足したフランス日本の2国間連携企画 ``NECO" では\emph{サイエンスメンバー}に選ばれた.
+	また2019年にはブラジル日本の2国間研究会 ``FAPESP-JSPS Workshop on dark energy, dark matter, and galaxies" にて
+	\emph{若手代表発表者}として選出されサンパウロ大学にて発表を行っている.
+	他にも\emph{学術振興会特別研究員PD, DC2}や\emph{科研費若手研究}に採択され, 
+	宇宙線研究所にて\emph{発表賞}を受賞し,
+	また多数の学術雑誌から\emph{論文の査読依頼}を受けてきた (詳細は(6)参照).
+	このような客観的評価は, 特に海外においても申請者が様々な研究者とともに研究課題を遂行し成果を上げることができる十分な根拠である.
+	
+	%\vfill
+	
+	%\bigskip
+	\smallskip
+	
 %end  研究遂行能力　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 }
 
 \subsection{学術雑誌(紀要・論文集等も含む)に発表した論文及び著書}
 \newcommand{\学術雑誌等に発表した論文または著書}{%
 %begin  学術雑誌等に発表した論文または著書＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-	\vspace{10\baselineskip}
+	
+	\vspace{-10pt}
+	\begin{enumerate} \itemsep-1mm
+		\item[] (査読有り)
+		\item \ul{Y.~Tada} and S.~Yokoyama, 
+		``Primordial black hole tower: Dark matter, earth-mass, and LIGO black holes,''
+		Phys.\ Rev.\ D \textbf{100}, no.2, 023537 (2019).
+		%doi:10.1103/PhysRevD.100.023537
+		%[arXiv:1904.10298 [astro-ph.CO]].
+		\item L.~Pinol, S.~Renaux-Petel and \ul{Y.~Tada},
+		``Inflationary stochastic anomalies,''
+		Class.\ Quant.\ Grav.\  \textbf{36}, no.7, 07LT01 (2019).
+		%doi:10.1088/1361-6382/ab097f
+		%[arXiv:1806.10126 [gr-qc]].
+		\item K.~Inomata, M.~Kawasaki, K.~Mukaida, \ul{Y.~Tada} and T.~T.~Yanagida,
+  		``Inflationary primordial black holes for the LIGO gravitational wave events and pulsar timing array experiments,''
+  		Phys.\ Rev.\ D {\bf 95}, no. 12, 123510 (2017).
+  		%doi:10.1103/PhysRevD.95.123510
+ 	 	%[arXiv:1611.06130 [astro-ph.CO]].
+		\item \ul{Y.~Tada} and V.~Vennin,
+		``Squeezed bispectrum in the $\delta N$ formalism: local observer effect in field space,''
+		JCAP \textbf{02}, 021 (2017).
+		%doi:10.1088/1475-7516/2017/02/021
+		%[arXiv:1609.08876 [astro-ph.CO]].
+		\item M.~Kawasaki, A.~Kusenko, \ul{Y.~Tada} and T.~T.~Yanagida,
+		``Primordial black holes as dark matter in supergravity inflation models,''
+		Phys.\ Rev.\ D \textbf{94}, no.8, 083523 (2016).
+		%doi:10.1103/PhysRevD.94.083523
+		%[arXiv:1606.07631 [astro-ph.CO]].
+		\item M.~Kawasaki and \ul{Y.~Tada},
+		``Can massive primordial black holes be produced in mild waterfall hybrid inflation?,''
+		JCAP \textbf{08}, 041 (2016).
+		%doi:10.1088/1475-7516/2016/08/041
+		%[arXiv:1512.03515 [astro-ph.CO]].
+		\item \ul{Y.~Tada} and S.~Yokoyama,
+		``Primordial black holes as biased tracers,''
+		Phys.\ Rev.\ D \textbf{91}, no.12, 123534 (2015).
+		%doi:10.1103/PhysRevD.91.123534
+		%[arXiv:1502.01124 [astro-ph.CO]].
+		\item T.~Fujita, M.~Kawasaki, \ul{Y.~Tada} and T.~Takesako,
+		``A new algorithm for calculating the curvature perturbations in stochastic inflation,''
+		JCAP \textbf{12}, 036 (2013).
+		%doi:10.1088/1475-7516/2013/12/036
+		%[arXiv:1308.4754 [astro-ph.CO]].
+		
+		%\item[] (査読なし)
+		
+		\item[] \emph{他9報}
+	\end{enumerate}
+	
+	%\clearpage
 	
 	%\begin{enumerate}
 		%\item[](査読有り)%===========================
@@ -244,9 +643,9 @@
 \subsection{学術雑誌等又は商業誌における解説・総説}
 \newcommand{\学術雑誌等または商業誌における解説や総説}{%
 %begin  学術雑誌等または商業誌における解説や総説＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-	
-	特になし.
-	
+	$\,\,$ なし
+	%\clearpage
+		
 	%\begin{enumerate}
 		%\item R.~Kipling, \underline{H. Yukawa},
 				%``The Elephant's Child (象の鼻はなぜ長い)'', 
@@ -259,7 +658,26 @@
 \subsection{国際会議における発表}
 \newcommand{\国際会議における発表}{%
 %begin  国際会議における発表＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-	\vspace{10\baselineskip}
+	
+	\vspace{-5pt}
+	\begin{enumerate} \itemsep-1mm
+		\item[] (口頭・招待)
+		\item T.~Fujita, L.~Pinol, S.~Renaux-Petel, \ul{Y.~Tada}, J.~Tokuda, and V.~Vennin,
+		``Stochastic formalism and curvature perturbation",
+		3-day workshop: INFLATION AND GEOMETRY, Institute d'Astrophysique de Paris,
+		2019年6月
+		\item[] (口頭・査読有り)
+		\item K.~Inomata, M.~Kawasaki, A.~Kusenko, K.~Mukaida, \ul{Y.~Tada}, T.~T.~Yanagida, and S.~Yokoyama,
+		``Aspects of primordial black hole as dark matter",
+		FAPESP-JSPS Workshop on dark energy, dark matter, and galaxies,
+		Universidade de S\~ao Paulo,
+		2019年2月
+		%\item L.~Pinol, S.~Renaux-Petel, and \underline{Y.~Tada},
+		%``Stochastic Formalism in Curved Field Space",
+		%COSMO17, Universit\'e Paris Diderot,
+		%2017年8月
+		\item[] \emph{他21件}
+	\end{enumerate}
 	
 	%\begin{enumerate}
 		%\item $\circ$ 湯川秀樹、
@@ -278,7 +696,21 @@
 \subsection{国内学会・シンポジウムにおける発表}
 \newcommand{\国内学会やシンポジウムにおける発表}{%
 %begin  国内学会やシンポジウムにおける発表＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-	\vspace{10\baselineskip}
+	
+	\vspace{-5pt}
+	\begin{enumerate} \itemsep-1mm
+		\item[] (口頭・招待)
+		\item 川崎雅裕, \ul{多田祐一郎},
+		``Can massive primordial black holes be produced in mild waterfall hybrid inflation?",
+		松江素粒子物理学研究会, 島根大学,
+		2016年3月
+		\item[] (口頭・査読なし)
+		\item 北嶋直弥, \ul{多田祐一郎}, 高橋史宜,
+		「極長ストカスティックインフレーション」,
+		日本物理学会 第75回年次大会, 名古屋大学
+		2020年3月
+		\item[] \emph{他8件}
+	\end{enumerate}
 	
 	%\begin{enumerate}
 		%\item $\circ$ 湯川秀樹、朝永振一郎、
@@ -293,8 +725,7 @@
 \subsection{特許}
 \newcommand{\特許等}{%
 %begin  特許等＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-	
-	特になし.
+	$\,\,$なし
 
 	%\begin{enumerate}
 		%\item[](公開中)
@@ -308,6 +739,39 @@
 \subsection{その他の業績}
 \newcommand{\その他の業績}{%
 %begin  その他の業績＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+	
+	\vspace{-5pt}
+	\begin{description}\itemsep-1mm \itemindent5zw \labelwidth6zw
+		\item[\gtfamily 職歴・フェローシップ]
+		\item[\rm\sffamily 2019.04--] \emph{非常勤講師 (力学1, 2)} 大同大学
+		\item[\rm\sffamily 2018.04--] \emph{日本学術振興会特別研究員 PD} 名古屋大学大学院 理学研究科 宇宙論研究室
+		\item[\rm\sffamily 2017.04--] \emph{ポスドク研究員} \itemsep-2mm
+		\item[\rm\sffamily\hfill 2018.03  ] Institut d'Astrophysique de Paris, France \itemsep-1mm
+		\item[\rm\sffamily 2015.04--] \emph{日本学術振興会特別研究員 DC2} \itemsep-2mm
+		\item[\rm\sffamily\hfill 2017.03  ] 東京大学 カブリ数物連携宇宙研究機構および宇宙線研究所 \itemsep-1mm
+		\item[\rm\sffamily 2012.10--] \emph{フォトンサイエンス・リーディング大学院} \itemsep-2mm
+		\item[\rm\sffamily\hfill 2017.03  ] 東京大学 カブリ数物連携宇宙研究機構および宇宙線研究所
+	\end{description}
+	\begin{description}\itemsep-1mm \itemindent5zw \labelwidth6zw
+		\item[\gtfamily 採択・受賞歴]
+		\item[\rm\sffamily 2019.02] \emph{若手代表発表者} FAPESP-JSPS Workshop on dark energy, dark matter, and galaxies
+		\item[\rm\sffamily 2017.02.24] \emph{所長賞 (博士部門)} 第6回修士博士研究発表会, 宇宙線研究所
+	\end{description}
+	\begin{description}\itemsep-1mm \itemindent5zw \labelwidth6zw
+		\item[\gtfamily 外部資金獲得状況]
+		\item[\rm\sffamily 2019--2020] \emph{科学研究費助成事業 若手研究} \\
+			JP19K14707「ストカスティック形式で迫る重力と量子論」1,560,000 円, 研究代表者
+	\end{description}
+	\begin{description}\itemsep-1mm \itemindent5zw \labelwidth6zw
+		\item[\gtfamily 研究者活動]
+		\item[\hfill -] \emph{サイエンスメンバー} \itemsep-2mm
+		\item[] International Research Network Extragalactic astrophysics and Cosmology (NECO) \itemsep-1mm
+		\item[\hfill -] \emph{査読} EPJC, PTEP, JCAP, PRD, Universe
+		\item[\rm\sffamily 2014.10.01--] \emph{留学} ヘルシンキ大学 Kari Enqvist 教授 \itemsep-2mm
+		\item[\rm\sffamily\hfill 12.22  ] フォトンサイエンス・リーディング大学院のコースワーク \itemsep-1mm
+	\end{description}
+
+
 		%\begin{enumerate}
 			%\item もうすぐもらえるで賞
 		%\end{enumerate}
